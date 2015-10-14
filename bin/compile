@@ -42,15 +42,15 @@ function vendor() {
 }
 
 echo "-----> Vendoring binaries"
-vendor "https://s3.amazonaws.com/mojodna-heroku/$STACK/cairo-1.14.2-1.tar.gz"  "$BUILD_DIR/vendor/cairo"
-vendor "https://s3.amazonaws.com/mojodna-heroku/$STACK/freetype-2.5.5-1.tar.gz" "$BUILD_DIR/vendor/freetype"
-vendor "https://s3.amazonaws.com/mojodna-heroku/$STACK/giflib-4.2.3-2.tar.gz"   "$BUILD_DIR/vendor/giflib"
-vendor "https://s3.amazonaws.com/mojodna-heroku/$STACK/pixman-0.32.6-2.tar.gz"  "$BUILD_DIR/vendor/pixman"
+vendor "https://copper-assets.s3.amazonaws.com/heroku-buildpack-cairo/cairo-1.14.2-1.tar.gz"  "$BUILD_DIR/vendor/cairo"
+vendor "https://copper-assets.s3.amazonaws.com/heroku-buildpack-cairo/freetype-2.5.5-1.tar.gz" "$BUILD_DIR/vendor/freetype"
+vendor "https://copper-assets.s3.amazonaws.com/heroku-buildpack-cairo/giflib-4.2.3-2.tar.gz"   "$BUILD_DIR/vendor/giflib"
+vendor "https://copper-assets.s3.amazonaws.com/heroku-buildpack-cairo/pixman-0.32.6-2.tar.gz"  "$BUILD_DIR/vendor/pixman"
 
 if [ $STACK == "cedar-14" ]; then
-  vendor "https://s3.amazonaws.com/mojodna-heroku/$STACK/pango-1.36.8-1.tar.gz"  "$BUILD_DIR/vendor/pango"
-  vendor "https://s3.amazonaws.com/mojodna-heroku/$STACK/harfbuzz-0.9.39-1.tar.gz"  "$BUILD_DIR/vendor/harfbuzz"
-  vendor "https://s3.amazonaws.com/mojodna-heroku/$STACK/fontconfig-2.11.93-1.tar.gz"  "$BUILD_DIR/vendor/fontconfig"
+  vendor "https://copper-assets.s3.amazonaws.com/heroku-buildpack-cairo/pango-1.36.8-1.tar.gz"  "$BUILD_DIR/vendor/pango"
+  vendor "https://copper-assets.s3.amazonaws.com/heroku-buildpack-cairo/harfbuzz-0.9.39-1.tar.gz"  "$BUILD_DIR/vendor/harfbuzz"
+  vendor "https://copper-assets.s3.amazonaws.com/heroku-buildpack-cairo/fontconfig-2.11.93-1.tar.gz"  "$BUILD_DIR/vendor/fontconfig"
 else
   echo
   echo "-----> WARNING <-----"
